@@ -1,6 +1,7 @@
 # 🚀 ONNX-Tutorial-CPP
 
 **ONNX-Tutorial-C++** is a hands-on guide for learning how to integrate and use **ONNX Runtime** in modern **C++**.  
+
 This repository is designed to run object detection inference with ONNX Runtime in C++ using practical examples.  
 
 ---
@@ -10,15 +11,15 @@ This repository is designed to run object detection inference with ONNX Runtime 
 ### 🔑 Core ONNX Runtime Concepts
 | File | Concept | Description |
 |------|---------|-------------|
-| `1.Ort_MemoryInfo.cpp` | `Ort::MemoryInfo` | Demonstrates CPU/GPU memory allocation strategies. |
-| `2.Ort_Env.cpp` | `Ort::Env` | Creates and configures the ONNX Runtime environment. |
-| `3.Ort_SessionOptions.cpp` | `Ort::SessionOptions` | Configures threading, graph optimizations, and profiling. |
-| `4.Ort_Allocator.cpp` | `Ort::Allocator` | Shows how ONNX Runtime allocates memory for tensors. |
-| `5.Ort_Session.cpp` | `Ort::Session` | Loads an ONNX model into a session. |
-| `6.Ort_Value.cpp` | `Ort::Value` | Creating and working with tensors in C++. |
-| `7.Ort_ModelMetadata.cpp` | Model Metadata | Reads model name, domain, version, and metadata. |
-| `8.ORT_Session_Run.cpp` | `Ort::Session::Run` | Running inference with inputs/outputs. |
-| `9.Ort_ModelOptimization.cpp` | Optimization | Simulating graph optimizations with ORT. |
+| `01.Ort_MemoryInfo.cpp` | `Ort::MemoryInfo` | Demonstrates CPU/GPU memory allocation strategies. |
+| `02.Ort_Env.cpp` | `Ort::Env` | Creates and configures the ONNX Runtime environment. |
+| `03.Ort_SessionOptions.cpp` | `Ort::SessionOptions` | Configures threading, graph optimizations, and profiling. |
+| `04.Ort_Allocator.cpp` | `Ort::Allocator` | Shows how ONNX Runtime allocates memory for tensors. |
+| `05.Ort_Session.cpp` | `Ort::Session` | Loads an ONNX model into a session. |
+| `06.Ort_Value.cpp` | `Ort::Value` | Creating and working with tensors in C++. |
+| `07.Ort_ModelMetadata.cpp` | Model Metadata | Reads model name, domain, version, and metadata. |
+| `08.Ort_Session_Run.cpp` | `Ort::Session::Run` | Running inference with inputs/outputs. |
+| `09.Ort_ModelOptimization.cpp` | Optimization | Simulating graph optimizations with ORT. |
 
 ### 🎯 Object Detection Examples
 | File | Concept | Description |
@@ -67,7 +68,7 @@ export ONNXRUNTIME_ROOT=$(pwd)/onnxruntime-linux-x64-gpu-1.18.1
 
 Compile:
 ```
-g++ -std=c++17 1.Ort_MemoryInfo.cpp \
+g++ -std=c++17 01.Ort_MemoryInfo.cpp \
     -I $ONNXRUNTIME_ROOT/include \
     -L $ONNXRUNTIME_ROOT/lib -lonnxruntime \
     -Wl,-rpath,$ONNXRUNTIME_ROOT/lib \
@@ -78,7 +79,7 @@ Run:
 ```
 LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH ./ort_memory_info
 ```
-**Note:** For all the core ONNX Runtime concept demos (`1.Ort_MemoryInfo.cpp` → `9.Ort_ModelOptimization.cpp`),  
+**Note:** For all the core ONNX Runtime concept demos (`01.Ort_MemoryInfo.cpp` → `09.Ort_ModelOptimization.cpp`),  
 the compilation and execution steps are the same.  
 
 Just replace the filename in the compile command with the file you want to run.
