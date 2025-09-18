@@ -60,7 +60,7 @@ export ONNXRUNTIME_ROOT=$(pwd)/onnxruntime-linux-x64-gpu-1.18.1
 ```
 
 
-### ✅ How to Compile and Run the code
+### 2️⃣ How to Compile and Run the code
 
 **1. Ort::MemoryInfo Demo**
 
@@ -117,6 +117,7 @@ Run:
 ```
 LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH ./cuda_memory_info   
 ```
+---
 
 ### 🛠️ Troubleshooting
 
@@ -146,6 +147,7 @@ nvcc --version
 
 **If not found, install CUDA from NVIDIA.**
 
+---
 
 ### 🤝 Contributing
 
@@ -154,10 +156,13 @@ nvcc --version
 - Submit a PR 🚀
 - If you find any bug in the code, please report to sudhirsilwal23@gmail.com
 
+---
+
 ### 📜 License
 
 MIT License © 2025 Sudhir Silwal
 
+---
 
 ### Acknowledgements
 
