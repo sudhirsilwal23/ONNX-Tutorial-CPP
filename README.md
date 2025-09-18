@@ -44,11 +44,13 @@ This repository is designed for **AI engineers, researchers, and C++ developers*
 
 Download the pre-built ONNX Runtime binaries. This example uses the **GPU version** for Linux.
 
-```bash
-2️⃣ Export Path
-export ONNXRUNTIME_ROOT=/path/to/onnxruntime-linux-x64-gpu-1.18.1
+wget https://github.com/microsoft/onnxruntime/releases/download/v1.18.1/onnxruntime-linux-x64-gpu-1.18.1.tgz
+tar -xvzf onnxruntime-linux-x64-gpu-1.18.1.tgz
 
-✅ How to Compile and Run
+
+
+### ✅ How to Compile and Run
+
 1. Ort::MemoryInfo Demo
 
 Compile:
@@ -91,7 +93,50 @@ g++ -std=c++17 11.cuda_memory_info.cpp \
     -Wl,-rpath,$ONNXRUNTIME_ROOT/lib \
     -o cuda_memory_info
 
+### 📌 Key Learnings
 
-Run:
+✔️ Setup and configure ONNX Runtime in C++
+✔️ Use Ort::Env, Ort::SessionOptions, Ort::Session, Ort::Value
+✔️ Read model metadata & run inference (Session::Run)
+✔️ Optimize models with ORT graph optimizations
+✔️ Integrate OpenCV for preprocessing/postprocessing
+✔️ Run YOLOv10n object detection in C++
+✔️ Query CUDA GPU memory usage
 
-./cuda_memory_info
+
+### 🛠️ Troubleshooting
+
+🔹 libonnxruntime.so: cannot open shared object file
+➡️ Add ONNX Runtime lib path to runtime linker:
+
+export LD_LIBRARY_PATH=$ONNXRUNTIME_ROOT/lib:$LD_LIBRARY_PATH
+
+
+🔹 opencv2/opencv.hpp: No such file or directory
+➡️ Install OpenCV development libraries:
+
+sudo apt-get install libopencv-dev pkg-config
+
+
+🔹 undefined reference to cuda...
+➡️ Ensure CUDA toolkit is installed and visible to compiler:
+
+nvcc --version
+
+
+If not found, install CUDA from NVIDIA.
+
+🔹 Bounding boxes misaligned in YOLO
+➡️ Ensure letterbox preprocessing is applied, and rescale predictions back to original image coordinates.
+
+### 🤝 Contributing
+
+- Fork this repo
+
+- Add your own ONNX Runtime C++ examples
+
+- Submit a PR 🚀
+
+📜 License
+
+MIT License © 2025 Sudhir Silwal
