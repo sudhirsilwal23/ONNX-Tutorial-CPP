@@ -74,8 +74,12 @@ Run:
 
 LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH ./ort_memory_info
 ```
+For all the core ONNX Runtime concept demos (`1.Ort_MemoryInfo.cpp` → `9.Ort_ModelOptimization.cpp`),  
+the compilation and execution steps are the same.  
 
-2. YOLOv10n Object Detection
+Just replace the filename in the compile command with the file you want to run.
+
+**2. YOLOv10n Object Detection**
 
 Compile:
 ```
@@ -92,7 +96,7 @@ Run:
 LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH ./ort_yolo10n
 ```
 
-3. CUDA Memory Info
+**3. CUDA Memory Info**
 
 Compile:
 
@@ -127,19 +131,21 @@ LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH ./cuda_memory_info
 
 ```
 export LD_LIBRARY_PATH=$ONNXRUNTIME_ROOT/lib:$LD_LIBRARY_PATH
-
+```
 
 **🔹 opencv2/opencv.hpp: No such file or directory**
 ➡️ Install OpenCV development libraries:
 
+```
 sudo apt-get install libopencv-dev pkg-config
-
+```
 
 **🔹 undefined reference to cuda...**
 ➡️ Ensure CUDA toolkit is installed and visible to compiler:
 
+```
 nvcc --version
-
+```
 
 **If not found, install CUDA from NVIDIA.**
 
