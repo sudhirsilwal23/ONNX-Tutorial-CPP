@@ -1,6 +1,7 @@
 /*
 
-Ort::MemoryInfo in ONNX Runtime C++ API, shows how you can query and print properties of memory allocators that ONNX Runtime uses when handling tensors.
+Ort::MemoryInfo in ONNX Runtime C++ API, shows how you can query and print properties of 
+memory allocators that ONNX Runtime uses when handling tensors.
 
 This is useful when you:
 -------------------------------------------
