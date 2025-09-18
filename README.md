@@ -60,6 +60,7 @@ export ONNXRUNTIME_ROOT=$(pwd)/onnxruntime-linux-x64-gpu-1.18.1
 
 **1. Ort::MemoryInfo Demo**
 
+
 Compile:
 ```
 g++ -std=c++17 1.Ort_MemoryInfo.cpp \
@@ -67,11 +68,10 @@ g++ -std=c++17 1.Ort_MemoryInfo.cpp \
     -L $ONNXRUNTIME_ROOT/lib -lonnxruntime \
     -Wl,-rpath,$ONNXRUNTIME_ROOT/lib \
     -o ort_memory_info
-
+```
 
 Run:
-
-
+```
 LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH ./ort_memory_info
 ```
 For all the core ONNX Runtime concept demos (`1.Ort_MemoryInfo.cpp` → `9.Ort_ModelOptimization.cpp`),  
@@ -81,6 +81,7 @@ Just replace the filename in the compile command with the file you want to run.
 
 **2. YOLOv10n Object Detection**
 
+
 Compile:
 ```
 g++ -std=c++17 10.Ort_Detect_YOLOv10n.cpp \
@@ -89,17 +90,17 @@ g++ -std=c++17 10.Ort_Detect_YOLOv10n.cpp \
     `pkg-config --cflags --libs opencv4` \
     -Wl,-rpath,$ONNXRUNTIME_ROOT/lib \
     -o ort_yolo10n
-
+```
 
 Run:
-
+```
 LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH ./ort_yolo10n
 ```
 
 **3. CUDA Memory Info**
 
-Compile:
 
+Compile:
 ```
 g++ -std=c++17 11.cuda_memory_info.cpp \
     -I $ONNXRUNTIME_ROOT/include \
@@ -107,9 +108,9 @@ g++ -std=c++17 11.cuda_memory_info.cpp \
     -lcuda -lcudart \
     -Wl,-rpath,$ONNXRUNTIME_ROOT/lib \
     -o cuda_memory_info
-
- Run:
-
+```
+Run:
+```
 LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH ./cuda_memory_info   
 ```
 
@@ -149,17 +150,12 @@ nvcc --version
 
 **If not found, install CUDA from NVIDIA.**
 
-**🔹 Bounding boxes misaligned in YOLO**
-➡️ Ensure letterbox preprocessing is applied, and rescale predictions back to original image coordinates.
 
 ### 🤝 Contributing
 
 - Fork this repo
-
 - Add your own ONNX Runtime C++ examples
-
 - Submit a PR 🚀
-
 - If you find any bug in the code, please report to sudhirsilwal23@gmail.com
 
 ### 📜 License
