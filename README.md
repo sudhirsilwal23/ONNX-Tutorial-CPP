@@ -47,19 +47,21 @@ First, download the pre-built ONNX Runtime binaries. This guide uses the **GPU v
 ```bash
 wget [https://github.com/microsoft/onnxruntime/releases/download/v1.18.1/onnxruntime-linux-x64-gpu-1.18.1.tgz](https://github.com/microsoft/onnxruntime/releases/download/v1.18.1/onnxruntime-linux-x64-gpu-1.18.1.tgz)
 tar -xvzf onnxruntime-linux-x64-gpu-1.18.1.tgz
-
+```
 Now, set the environment variable to make it easy to reference the ONNX Runtime files during compilation.
 
+```
 export ONNXRUNTIME_ROOT=$(pwd)/onnxruntime-linux-x64-gpu-1.18.1
 
+```
 
 
 ### ✅ How to Compile and Run
 
-1. Ort::MemoryInfo Demo
+**1. Ort::MemoryInfo Demo**
 
 Compile:
-
+```
 g++ -std=c++17 1.Ort_MemoryInfo.cpp \
     -I $ONNXRUNTIME_ROOT/include \
     -L $ONNXRUNTIME_ROOT/lib -lonnxruntime \
@@ -69,12 +71,14 @@ g++ -std=c++17 1.Ort_MemoryInfo.cpp \
 
 Run:
 
-./ort_memory_info
+
+LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH ./ort_memory_info
+```
 
 2. YOLOv10n Object Detection
 
 Compile:
-
+```
 g++ -std=c++17 10.Ort_Detect_YOLOv10n.cpp \
     -I $ONNXRUNTIME_ROOT/include \
     -L $ONNXRUNTIME_ROOT/lib -lonnxruntime \
@@ -86,17 +90,24 @@ g++ -std=c++17 10.Ort_Detect_YOLOv10n.cpp \
 Run:
 
 LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH ./ort_yolo10n
+```
 
 3. CUDA Memory Info
 
 Compile:
 
+```
 g++ -std=c++17 11.cuda_memory_info.cpp \
     -I $ONNXRUNTIME_ROOT/include \
     -L $ONNXRUNTIME_ROOT/lib -lonnxruntime \
     -lcuda -lcudart \
     -Wl,-rpath,$ONNXRUNTIME_ROOT/lib \
     -o cuda_memory_info
+
+ Run:
+
+LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH ./cuda_memory_info   
+```
 
 ### 📌 Key Learnings
 
@@ -114,6 +125,7 @@ g++ -std=c++17 11.cuda_memory_info.cpp \
 **🔹 libonnxruntime.so: cannot open shared object file**
 ➡️ Add ONNX Runtime lib path to runtime linker:
 
+```
 export LD_LIBRARY_PATH=$ONNXRUNTIME_ROOT/lib:$LD_LIBRARY_PATH
 
 
