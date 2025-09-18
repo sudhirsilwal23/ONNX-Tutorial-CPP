@@ -154,3 +154,10 @@ nvcc --version
 ### 📜 License
 
 MIT License © 2025 Sudhir Silwal
+
+
+### Acknowledgements
+
+- [ONNX Runtime C++ API Documentation](https://onnxruntime.ai/docs/api/c/)  
+- [Ultralytics ONNX Integration Guide](https://docs.ultralytics.com/integrations/onnx/)  
+- [OpenCV C++ Tutorials](https://www.opencv-srf.com/2017/11/opencv-cpp-api.html)  
