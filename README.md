@@ -1,7 +1,7 @@
 # 🚀 ONNX-Tutorial-CPP
 
-**ONNX-Tutorial-C++** is a hands-on guide for learning how to integrate and use **ONNX Runtime** in modern **C++ applications**.  
-This repository is designed for **AI engineers, researchers, and C++ developers** who want to run deep learning inference with ONNX Runtime in C++ using practical examples.  
+**ONNX-Tutorial-C++** is a hands-on guide for learning how to integrate and use **ONNX Runtime** in modern **C++**.  
+This repository is designed to run object detection inference with ONNX Runtime in C++ using practical examples.  
 
 ---
 
