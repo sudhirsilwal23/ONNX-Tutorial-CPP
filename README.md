@@ -42,10 +42,14 @@ This repository is designed for **AI engineers, researchers, and C++ developers*
 ### 1️⃣ Install ONNX Runtime C++  
 
 
-Download the pre-built ONNX Runtime binaries. This example uses the **GPU version** for Linux.
+- Download the pre-built ONNX Runtime binaries. This example uses the **GPU version** for Linux.
 
 wget https://github.com/microsoft/onnxruntime/releases/download/v1.18.1/onnxruntime-linux-x64-gpu-1.18.1.tgz
 tar -xvzf onnxruntime-linux-x64-gpu-1.18.1.tgz
+
+- Now, set the environment variable to make it easy to reference the ONNX Runtime files during compilation.
+
+export ONNXRUNTIME_ROOT=$(pwd)/onnxruntime-linux-x64-gpu-1.18.1
 
 
 
@@ -106,27 +110,27 @@ g++ -std=c++17 11.cuda_memory_info.cpp \
 
 ### 🛠️ Troubleshooting
 
-🔹 libonnxruntime.so: cannot open shared object file
+**🔹 libonnxruntime.so: cannot open shared object file**
 ➡️ Add ONNX Runtime lib path to runtime linker:
 
 export LD_LIBRARY_PATH=$ONNXRUNTIME_ROOT/lib:$LD_LIBRARY_PATH
 
 
-🔹 opencv2/opencv.hpp: No such file or directory
+**🔹 opencv2/opencv.hpp: No such file or directory**
 ➡️ Install OpenCV development libraries:
 
 sudo apt-get install libopencv-dev pkg-config
 
 
-🔹 undefined reference to cuda...
+**🔹 undefined reference to cuda...**
 ➡️ Ensure CUDA toolkit is installed and visible to compiler:
 
 nvcc --version
 
 
-If not found, install CUDA from NVIDIA.
+**If not found, install CUDA from NVIDIA.**
 
-🔹 Bounding boxes misaligned in YOLO
+**🔹 Bounding boxes misaligned in YOLO**
 ➡️ Ensure letterbox preprocessing is applied, and rescale predictions back to original image coordinates.
 
 ### 🤝 Contributing
@@ -137,6 +141,8 @@ If not found, install CUDA from NVIDIA.
 
 - Submit a PR 🚀
 
-📜 License
+- If you find any bug in the code, please report to sudhirsilwal23@gmail.com
+
+### 📜 License
 
 MIT License © 2025 Sudhir Silwal
