@@ -121,6 +121,7 @@ LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH ./cuda_memory_info
 ### 🛠️ Troubleshooting
 
 **🔹 libonnxruntime.so: cannot open shared object file**
+
 ➡️ Add ONNX Runtime lib path to runtime linker:
 
 ```
@@ -128,6 +129,7 @@ export LD_LIBRARY_PATH=$ONNXRUNTIME_ROOT/lib:$LD_LIBRARY_PATH
 ```
 
 **🔹 opencv2/opencv.hpp: No such file or directory**
+
 ➡️ Install OpenCV development libraries:
 
 ```
@@ -135,6 +137,7 @@ sudo apt-get install libopencv-dev pkg-config
 ```
 
 **🔹 undefined reference to cuda...**
+
 ➡️ Ensure CUDA toolkit is installed and visible to compiler:
 
 ```
