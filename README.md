@@ -32,12 +32,17 @@ This repository is designed for **AI engineers, researchers, and C++ developers*
 
 ### 📂 Assets
 - `assets/models/` → Place ONNX models here (e.g., `yolov10n.onnx`).  
-- `assets/images/` → Place test images here (e.g., `car.jpg`, `lena.png`).  
-
+- `assets/images/` → Place test images here (e.g., `car.jpg`).  
+- `assets/output/` → output images here (e.g., `Yolov11_output_car.jpg`). 
 
 ---
 
 ## 🛠️ Setup Instructions  
+
+**Clone the Repository**
+```bash
+git clone https://github.com/sudhirsilwal23/ONNX-Tutorial-CPP.git
+```
 
 ### 1️⃣ Install ONNX Runtime C++  
 
@@ -52,11 +57,10 @@ Now, set the environment variable to make it easy to reference the ONNX Runtime 
 
 ```
 export ONNXRUNTIME_ROOT=$(pwd)/onnxruntime-linux-x64-gpu-1.18.1
-
 ```
 
 
-### ✅ How to Compile and Run
+### ✅ How to Compile and Run the code
 
 **1. Ort::MemoryInfo Demo**
 
@@ -74,7 +78,7 @@ Run:
 ```
 LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH ./ort_memory_info
 ```
-For all the core ONNX Runtime concept demos (`1.Ort_MemoryInfo.cpp` → `9.Ort_ModelOptimization.cpp`),  
+**Note:** For all the core ONNX Runtime concept demos (`1.Ort_MemoryInfo.cpp` → `9.Ort_ModelOptimization.cpp`),  
 the compilation and execution steps are the same.  
 
 Just replace the filename in the compile command with the file you want to run.
@@ -113,17 +117,6 @@ Run:
 ```
 LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH ./cuda_memory_info   
 ```
-
-### 📌 Key Learnings
-
-✔️ Setup and configure ONNX Runtime in C++
-✔️ Use Ort::Env, Ort::SessionOptions, Ort::Session, Ort::Value
-✔️ Read model metadata & run inference (Session::Run)
-✔️ Optimize models with ORT graph optimizations
-✔️ Integrate OpenCV for preprocessing/postprocessing
-✔️ Run YOLOv10n object detection in C++
-✔️ Query CUDA GPU memory usage
-
 
 ### 🛠️ Troubleshooting
 
