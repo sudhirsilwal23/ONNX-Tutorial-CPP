@@ -42,12 +42,13 @@ This repository is designed for **AI engineers, researchers, and C++ developers*
 ### 1️⃣ Install ONNX Runtime C++  
 
 
-- Download the pre-built ONNX Runtime binaries. This example uses the **GPU version** for Linux.
+First, download the pre-built ONNX Runtime binaries. This guide uses the **GPU version for Linux**.
 
-wget https://github.com/microsoft/onnxruntime/releases/download/v1.18.1/onnxruntime-linux-x64-gpu-1.18.1.tgz
+```bash
+wget [https://github.com/microsoft/onnxruntime/releases/download/v1.18.1/onnxruntime-linux-x64-gpu-1.18.1.tgz](https://github.com/microsoft/onnxruntime/releases/download/v1.18.1/onnxruntime-linux-x64-gpu-1.18.1.tgz)
 tar -xvzf onnxruntime-linux-x64-gpu-1.18.1.tgz
 
-- Now, set the environment variable to make it easy to reference the ONNX Runtime files during compilation.
+Now, set the environment variable to make it easy to reference the ONNX Runtime files during compilation.
 
 export ONNXRUNTIME_ROOT=$(pwd)/onnxruntime-linux-x64-gpu-1.18.1
 
