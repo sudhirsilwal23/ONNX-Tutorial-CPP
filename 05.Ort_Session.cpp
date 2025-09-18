@@ -22,7 +22,7 @@ int main() {
     session_options.SetIntraOpNumThreads(2);
     session_options.SetGraphOptimizationLevel(GraphOptimizationLevel::ORT_ENABLE_BASIC);
 
-    const char* model_path = "/home/sudhir/C++/OC_SORT_CPP/ONNX/mnist.onnx";
+    const char* model_path = "/assets/models/mnist.onnx";
 
     try {
         Ort::Session session(env, model_path, session_options);

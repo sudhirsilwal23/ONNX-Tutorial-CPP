@@ -6,7 +6,7 @@ int main() {
     Ort::SessionOptions session_options;
 
     // Load your model (replace with actual path)
-    Ort::Session session(env, "/home/sudhir/C++/OC_SORT_CPP/ONNX/mnist.onnx", session_options);
+    Ort::Session session(env, "/assets/models/mnist.onnx", session_options);
 
     // Get metadata
     Ort::ModelMetadata metadata = session.GetModelMetadata();

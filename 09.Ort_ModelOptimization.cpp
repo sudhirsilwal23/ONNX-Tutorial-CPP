@@ -24,7 +24,7 @@ int main() {
     session_options.SetIntraOpNumThreads(2);
 
     // Step 3: Load a model (replace with your actual ONNX path)
-    const char* model_path = "/home/sudhir/C++/OC_SORT_CPP/ONNX/mnist.onnx";
+    const char* model_path = "/assets/models/mnist.onnx";
     std::cout << "Loading model: " << model_path << std::endl;
 
     try {

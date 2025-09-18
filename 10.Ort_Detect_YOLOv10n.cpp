@@ -14,11 +14,11 @@ int main() {
         Ort::SessionOptions session_options;
         session_options.SetGraphOptimizationLevel(GraphOptimizationLevel::ORT_ENABLE_ALL);
 
-        const std::string model_path = "/home/sudhir/C++/OC_SORT_CPP/ONNX/assets/models/yolov10n.onnx";
+        const std::string model_path = "/assets/models/yolov10n.onnx";
         Ort::Session session(env, model_path.c_str(), session_options);
 
         // 2. Load input image
-        const std::string image_path = "/home/sudhir/C++/OC_SORT_CPP/ONNX/assets/images/car.png";
+        const std::string image_path = "/assets/images/car.png";
         cv::Mat image = cv::imread(image_path);
         if (image.empty()) {
             std::cerr << "❌ Error: could not load image at " << image_path << std::endl;
@@ -98,7 +98,7 @@ int main() {
         }
 
         // 7. Save result
-        const std::string output_path = "yolov10_car_output.jpg";
+        const std::string output_path = "/assets/output/yolov10_car_output.jpg";
         cv::imwrite(output_path, image);
         std::cout << "✅ Detection complete. Saved as " << output_path << std::endl;
     }
