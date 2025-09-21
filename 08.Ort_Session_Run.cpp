@@ -3,7 +3,8 @@
 Why do we need session.Run(...)?
 ---------------------------------------------------------
 
-We need Ort::Session::Run because it is the function that executes the neural network model. It's the command that tells ONNX Runtime to perform the forward pass, taking the prepared input data and producing the final output. It is the core of the inference process.
+We need Ort::Session::Run because it is the function that executes the neural network model. It's the command that tells ONNX Runtime 
+to perform the forward pass, taking the prepared input data and producing the final output. It is the core of the inference process.
 
 The Ort::Session::Run method orchestrates the entire inference pipeline, abstracting away the complex details of computation and data flow.
 1. Input-to-Output Mapping: The Run method takes three sets of arrays as input:
@@ -14,13 +15,16 @@ The Ort::Session::Run method orchestrates the entire inference pipeline, abstrac
 
 This explicit mapping ensures that data is sent to the correct places in the model, and the desired results are returned.
 
-2. Graph Execution: Once the Run method is called, ONNX Runtime takes control. It uses the Ort::Session object's internal representation of the model and its configurations to efficiently execute the computational graph. This includes:
+2. Graph Execution: Once the Run method is called, ONNX Runtime takes control. It uses the Ort::Session object's internal 
+representation of the model and its configurations to efficiently execute the computational graph. This includes:
 
     - Operator Dispatch: Running the correct implementation for each operation (e.g., convolution, ReLU, etc.).
     - Execution Provider Selection: Utilizing the appropriate hardware (CPU, GPU, etc.) based on the session's configuration.
     - Data Flow Management: Moving data between layers and allocating/freeing memory as needed.
 
-3. Result Retrieval: The Run method returns a std::vector<Ort::Value>, where each Ort::Value in the vector corresponds to an output specified in the input list of output names. This is the final step where the results of the model's prediction are provided back to the user's application for further processing.
+3. Result Retrieval: The Run method returns a std::vector<Ort::Value>, where each Ort::Value in the vector corresponds to an output 
+specified in the input list of output names. This is the final step where the results of the model's prediction are provided back 
+to the user's application for further processing.
 
 
 */

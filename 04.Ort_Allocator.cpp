@@ -3,13 +3,13 @@
 Why do we need Ort:Allocator?
 ----------------------------------
 
-You need an Ort::Allocator to manage memory for ONNX Runtime operations, ensuring data is allocated and freed correctly, especially when working with different hardware like CPUs and GPUs.
-It provides a standardized way for the runtime to handle memory, which is essential for creating inputs and outputs that can be processed by a model.
+You need an Ort::Allocator to manage memory for ONNX Runtime operations, ensuring data is allocated and freed correctly, especially
+when working with different hardware like CPUs and GPUs.
+
+It provides a standardized way for the runtime to handle memory, which is essential for creating inputs and outputs that can be
+processed by a model.
 
 */
-
-
-
 
 #include <iostream>
 #include <vector>

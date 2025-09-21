@@ -1,7 +1,10 @@
 /*
-We need ONNX Runtime model optimization to improve the inference performance of a model. It's a crucial step that transforms a standard ONNX model into a version that runs faster and more efficiently on a target device.
+We need ONNX Runtime model optimization to improve the inference performance of a model. It's a crucial step that transforms a standard 
+ONNX model into a version that runs faster and more efficiently on a target device.
 
-The optimization process is essentially a series of graph-level transformations that make the model more efficient without affecting its accuracy.  These optimizations are applied when the model is loaded into an Ort::Session by setting the SetGraphOptimizationLevel on the Ort::SessionOptions
+The optimization process is essentially a series of graph-level transformations that make the model more efficient without affecting 
+its accuracy.  These optimizations are applied when the model is loaded into an Ort::Session by setting the SetGraphOptimizationLevel 
+on the Ort::SessionOptions
 */
 
 
