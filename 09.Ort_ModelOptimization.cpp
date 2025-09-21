@@ -47,7 +47,7 @@ int main() {
         std::cout << "Model loaded successfully!" << std::endl;
         std::cout << "Graph optimizations applied: ORT_ENABLE_ALL" << std::endl;
 
-        // ✅ Safe custom metadata lookup
+        //  Safe custom metadata lookup
         try {
             auto value = metadata.LookupCustomMetadataMapAllocated("model_version", allocator);
             if (value) {

@@ -18,7 +18,7 @@ This is useful when you:
 int main() {
     std::cout << "--- Ort::MemoryInfo Properties Demo ---\n";
 
-    // 1️⃣ CPU MemoryInfo (4-arg constructor)
+    // 1. CPU MemoryInfo (4-arg constructor)
     Ort::MemoryInfo cpu_info("Cpu", OrtDeviceAllocator, 0, OrtMemTypeDefault);
                                 
                                 // "Cpu"              → allocator name.
@@ -34,7 +34,7 @@ int main() {
     std::cout << "  Device ID      : " << cpu_info.GetDeviceId() << "\n";
     std::cout << "  Memory Type    : " << cpu_info.GetMemoryType() << "\n\n";
 
-    // 2️⃣ CUDA MemoryInfo (if available)
+    // 2. CUDA MemoryInfo (if available)
     try {
         Ort::MemoryInfo cuda_info("Cuda", OrtDeviceAllocator, 0, OrtMemTypeDefault);
 

@@ -34,7 +34,7 @@ int main() {
     session_options.DisableMemPattern();
     std::cout << "Memory pattern optimization disabled." << std::endl;
 
-    // ✅ Define CUDA options
+    // Define CUDA options
     OrtCUDAProviderOptions cuda_options;
     cuda_options.device_id = 0;  // use GPU 0
     cuda_options.arena_extend_strategy = 0;

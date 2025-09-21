@@ -53,7 +53,7 @@ int main() {
         const std::string image_path = "/assets/images/car.png";
         cv::Mat image = cv::imread(image_path);
         if (image.empty()) {
-            std::cerr << "❌ Error: could not load image at " << image_path << std::endl;
+            std::cerr << " Error: could not load image at " << image_path << std::endl;
             return -1;
         }
 
@@ -132,7 +132,7 @@ int main() {
         // 7. Save result
         const std::string output_path = "/assets/output/yolov10_car_output.jpg";
         cv::imwrite(output_path, image);
-        std::cout << "✅ Detection complete. Saved as " << output_path << std::endl;
+        std::cout << " Detection complete. Saved as " << output_path << std::endl;
     }
     catch (const Ort::Exception& e) {
         std::cerr << "ONNX Runtime error: " << e.what() << std::endl;
