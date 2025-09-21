@@ -1,3 +1,21 @@
+/*
+
+This C++ code performs object detection using a YOLOv10 model through the ONNX Runtime library. The code loads an ONNX model, pre-processes an image to match the model's input requirements, runs inference, and then post-processes the output to draw bounding boxes and labels on the image. The final image with detections is saved to a file.
+
+1. ONNX as an Interchange Format 
+The YOLOv10 model is saved in the .onnx format. This is a standard, open format that allows models to be trained in one framework (like PyTorch or TensorFlow) and deployed in another, without being tied to the original framework. The provided code takes advantage of this by using a YOLOv10 model, which was likely trained in a different environment, and running it with the ONNX Runtime engine. This ensures interoperability.
+
+2. ONNX Runtime for High-Performance Inference 
+The ONNX Runtime library is the high-performance inference engine that executes the ONNX model. Its primary roles in this code are:
+
+    Model Loading: It reads and parses the .onnx file, creating an in-memory representation of the model's computational graph.
+    Graph Optimization: As seen with session_options.SetGraphOptimizationLevel(GraphOptimizationLevel::ORT_ENABLE_ALL), the runtime automatically performs aggressive optimizations on the model's graph. This makes the model run faster and more efficiently on the target hardware (in this case, the CPU).
+    Inference Execution: The session.Run() method is the core of the process. It takes the prepared input tensor and executes the model's forward pass, performing all the necessary mathematical operations to produce the output tensor containing the object detection results.
+    Hardware Abstraction: ONNX Runtime handles the low-level details of running the model on the available hardware. While this code uses the default CPU execution provider, ONNX Runtime could seamlessly switch to a GPU by appending the CUDA execution provider, without changing the core model-running logic.
+
+*/
+
+
 #include <iostream>
 #include <vector>
 #include <string>

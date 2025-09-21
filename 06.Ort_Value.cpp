@@ -1,3 +1,20 @@
+/*
+
+Why do we need Ort:;Value?
+-----------------------------------
+We need Ort::Value because it's the fundamental data structure used by ONNX Runtime to represent all inputs, outputs, and intermediate data within a model. Think of it as a smart container that holds the raw tensor data along with essential metadata like its shape and data type.
+
+1. Encapsulates Tensor Data
+Ort::Value is a high-level wrapper around the raw numerical data. Instead of passing around simple float* or double* pointers, Ort::Value bundles the data with its shape, data type (e.g., float, int64_t), and memory location (e.g., CPU or GPU). This unified structure ensures that the ONNX Runtime engine can correctly interpret and process the data regardless of its source. The provided code creates a tensor and gives it a shape of [1, 3, 2, 2], which tells the runtime how to interpret the one-dimensional input_data vector as a 4D tensor.
+
+2. Required for Model Inference 
+The Ort::Session::Run() method, which executes the model, requires its inputs and produces its outputs as Ort::Value objects. You can't pass raw data pointers directly to the Run method. You must first wrap your input data into an Ort::Value object, and the outputs returned by the method will also be Ort::Value objects. This consistent interface is vital for the runtime's internal operations and ensures that the model can be run correctly.
+
+3. Supports Diverse Data Types and Structures 
+While the most common use of Ort::Value is for tensors, it's a versatile class that can also represent other data structures supported by the ONNX standard, such as sequences (lists) and maps. This flexibility allows ONNX Runtime to support more complex models that use these data types beyond simple tensors.
+
+*/
+
 #include <iostream>
 #include <vector>
 #include <onnxruntime_cxx_api.h>

@@ -1,3 +1,28 @@
+/*
+
+Why do wee need Ort::Session?
+----------------------------------------------------
+We need Ort::Session because it is the central object that encapsulates and manages a loaded ONNX model. It's the primary interface for running inference and interacting with the model.
+Think of it as the engine that drives all model-related operations.
+
+1. Model Loading and Optimization 
+The Ort::Session constructor is responsible for loading the ONNX model file from disk. During this process, it applies all the optimizations and configurations specified by the Ort::SessionOptions object. 
+This includes setting the number of threads for parallelism (SetIntraOpNumThreads) and applying graph-level optimizations (SetGraphOptimizationLevel).
+Without a session, these optimizations would never be applied, and the model would not be prepared for efficient execution.
+
+2. Abstraction of Model Details 
+The session object provides methods to query important information about the model, such as the number of inputs and outputs (GetInputCount, GetOutputCount), 
+their names (GetInputNameAllocated, GetOutputNameAllocated), and their shapes and data types (GetInputTypeInfo, GetOutputTypeInfo). This is crucial for programmatically preparing
+the correct input tensors and interpreting the output results. It abstracts away the complex internal structure of the ONNX file, presenting a clean and accessible interface.
+
+3. Inference Execution 
+Ultimately, the session is the object you call to run the actual inference on the model. The session.Run() method takes the prepared input tensors and executes 
+the model's forward pass, producing the output tensors. The Ort::Session manages the entire computational pipeline, from data flow to kernel execution on the chosen hardware (CPU, GPU, etc.), making it an indispensable part of the ONNX Runtime API.
+
+*/
+
+
+
 #include <iostream>
 #include <vector>
 #include <string>
