@@ -1,4 +1,5 @@
-# 🚀 ONNX-Tutorial-CPP
+#  <img width="48" height="48" alt="31675368" src="https://github.com/user-attachments/assets/e49160e8-e5d8-4464-8963-ad7d1e5baa7a" />
+ONNX-Tutorial-CPP
 
 **ONNX-Tutorial-C++** is a hands-on guide for learning how to integrate and use **ONNX Runtime** in modern **C++**.  
 
