@@ -34,7 +34,7 @@ This repository is designed to run object detection inference with ONNX Runtime 
 ### 📂 Assets
 - `assets/models/` → Place ONNX models here (e.g., `yolov10n.onnx`).  
 - `assets/images/` → Place test images here (e.g., `car.jpg`).  
-- `assets/output/` → output images here (e.g., `Yolov11_output_car.jpg`). 
+- `assets/output/` → Output images location (e.g., `Yolov11_output_car.jpg`). 
 
 ---
 

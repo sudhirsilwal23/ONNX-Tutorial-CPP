@@ -1,3 +1,14 @@
+
+/*
+This code configure and customize how ONNX Runtime will execute a deep learning model. 
+Without a SessionOptions object, ONNX Runtime would run with its default settings, which may not be optimized for your specific hardware or performance requirements. 
+
+
+how to configure various settings for an ONNX Runtime (ORT) session using the Ort::SessionOptions class.
+It doesn't load or run a model but simulates the setup process, showing how to control thread usage, optimization levels, profiling, and specifically, how to enable and configure the CUDA execution provider.
+
+*/
+
 #include <iostream>
 #include <onnxruntime_cxx_api.h>
 
