@@ -8,7 +8,7 @@ This repository is designed to run object detection inference with ONNX Runtime 
 
 ## 📂 Repository Contents  
 
-### 🔑 Core ONNX Runtime Concepts
+### Core ONNX Runtime Concepts
 | File | Concept | Description |
 |------|---------|-------------|
 | `01.Ort_MemoryInfo.cpp` | `Ort::MemoryInfo` | Demonstrates CPU/GPU memory allocation strategies. |
@@ -21,17 +21,17 @@ This repository is designed to run object detection inference with ONNX Runtime 
 | `08.Ort_Session_Run.cpp` | `Ort::Session::Run` | Running inference with inputs/outputs. |
 | `09.Ort_ModelOptimization.cpp` | Optimization | Simulating graph optimizations with ORT. |
 
-### 🎯 Object Detection Examples
+### Object Detection Examples
 | File | Concept | Description |
 |------|---------|-------------|
 | `10.Ort_Detect_YOLOv10n.cpp` | YOLOv10n Detection | End-to-end object detection with OpenCV + ONNX Runtime. |
 
-### 🎯 CUDA Examples
+### CUDA Examples
 | File | Concept | Description |
 |------|---------|-------------|
 | `11.cuda_memory_info.cpp` | CUDA Memory | Querying CUDA device memory info (free/total memory). |
 
-### 📂 Assets
+### Assets
 - `assets/models/` → Place ONNX models here (e.g., `yolov10n.onnx`).  
 - `assets/images/` → Place test images here (e.g., `car.jpg`).  
 - `assets/output/` → Output images location (e.g., `Yolov11_output_car.jpg`). 
