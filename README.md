@@ -7,10 +7,15 @@ This repository is designed to run object detection inference with ONNX Runtime 
 
 [![Star this repository](https://img.shields.io/github/stars/sudhirsilwal23/ONNX-Tutorial-CPP?style=social)](https://github.com/sudhirsilwal23/ONNX-Tutorial-CPP/stargazers)
 
+<a class="github-button" href="https://github.com/sudhirsilwal23/ONNX-Tutorial-CPP" data-icon="octicon-star" data-show-count="true" aria-label="Star sudhirsilwal23/ONNX-Tutorial-CPP on GitHub">Star</a>
 
-<a class="github-button" href="https://github.com/sudhirsilwal23/ONNX-Tutorial-CPP" data-show-count="true" aria-label="Star sudhirsilwal23/ONNX-Tutorial-CPP on GitHub">Star</a>
+<a class="github-button" href="https://github.com/sudhirsilwal23" data-icon="octicon-person" data-show-count="true" aria-label="Follow @sudhirsilwal23 on GitHub">Follow @sudhirsilwal23</a>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
 ---
 
 ## 📂 Repository Contents  
