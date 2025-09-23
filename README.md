@@ -5,6 +5,8 @@ This repository is designed to run object detection inference with ONNX Runtime 
 
 [![GitHub followers](https://img.shields.io/github/followers/sudhirsilwal23?style=social)](https://github.com/sudhirsilwal23)
 
+[![Star this repository](https://img.shields.io/github/stars/sudhirsilwal23/ONNX-Tutorial-CPP?style=social)](https://github.com/sudhirsilwal23/ONNX-Tutorial-CPP/stargazers)
+
 ---
 
 ## 📂 Repository Contents  
