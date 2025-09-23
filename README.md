@@ -1,8 +1,9 @@
 #  <img width="48" height="48" alt="31675368" src="https://github.com/user-attachments/assets/e49160e8-e5d8-4464-8963-ad7d1e5baa7a" />
 
 **ONNX-Tutorial-CPP** is a hands-on guide for learning how to integrate and use **ONNX Runtime** in modern **C++**.  
-
 This repository is designed to run object detection inference with ONNX Runtime in C++ using practical examples.  
+
+[![GitHub followers](https://img.shields.io/github/followers/sudhirsilwal23?style=social)](https://github.com/sudhirsilwal23)
 
 ---
 
