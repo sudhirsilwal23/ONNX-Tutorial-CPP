@@ -3,18 +3,9 @@
 **ONNX-Tutorial-CPP** is a hands-on guide for learning how to integrate and use **ONNX Runtime** in modern **C++**.  
 This repository is designed to run object detection inference with ONNX Runtime in C++ using practical examples.  
 
-[![GitHub followers](https://img.shields.io/github/followers/sudhirsilwal23?style=social)](https://github.com/sudhirsilwal23)
+[![Follow @Sudhir](https://img.shields.io/badge/Follow-sudhirsilwal23-2396E4?style=for-the-badge&logo=github)](https://github.com/sudhirsilwal23)
 
-[![Star this repository](https://img.shields.io/github/stars/sudhirsilwal23/ONNX-Tutorial-CPP?style=social)](https://github.com/sudhirsilwal23/ONNX-Tutorial-CPP/stargazers)
-
-<a class="github-button" href="https://github.com/sudhirsilwal23/ONNX-Tutorial-CPP" data-icon="octicon-star" data-show-count="true" aria-label="Star sudhirsilwal23/ONNX-Tutorial-CPP on GitHub">Star</a>
-
-<a class="github-button" href="https://github.com/sudhirsilwal23" data-icon="octicon-person" data-show-count="true" aria-label="Follow @sudhirsilwal23 on GitHub">Follow @sudhirsilwal23</a>
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-
-
-
+[![Star this repo](https://img.shields.io/badge/Star-ONNX--Tutorial--CPP-yellow?style=for-the-badge&logo=github)](https://github.com/sudhirsilwal23/ONNX-Tutorial-CPP)
 
 ---
 
@@ -165,8 +156,6 @@ nvcc --version
 ### 🤝 Contributing
 
 - Fork this repo
-- Add your own ONNX Runtime C++ examples
-- Submit a PR 🚀
 - If you find any bug in the code, please report to sudhirsilwal23@gmail.com
 
 ---
