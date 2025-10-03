@@ -9,6 +9,8 @@ This repository is designed to run object detection inference with ONNX Runtime 
 
 [![Star this repo](https://img.shields.io/badge/Star-ONNX--Tutorial--CPP-yellow?style=for-the-badge&logo=github)](https://github.com/sudhirsilwal23/ONNX-Tutorial-CPP)
 
+![Visitor Count](https://komarev.com/ghpvc/?username=sudhirsilwal23&repo=ONNX-Tutorial-CPP&color=green&style=flat-square)
+
 ---
 
 ## 📂 Repository Contents  
