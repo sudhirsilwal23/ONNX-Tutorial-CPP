@@ -2,7 +2,7 @@
 
 ## 📂 Overview 
 
-**ONNX-Tutorial-CPP** is a hands-on guide for learning how to integrate and use **ONNX Runtime** in modern **C++**.  
+**ONNX-Tutorial-CPP** (ONNX - Open Neural Network Exchange) is a hands-on guide for learning how to integrate and use **ONNX Runtime** in modern **C++**.  
 This repository is designed to run object detection inference with ONNX Runtime in C++ using practical examples.  
 
 [![Follow @Sudhir](https://img.shields.io/badge/Follow-sudhirsilwal23-2396E4?style=for-the-badge&logo=github)](https://github.com/sudhirsilwal23)
